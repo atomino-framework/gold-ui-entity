@@ -1,11 +1,10 @@
-import Confirm from "gold-entity/form/components/confirm.svelte";
-import type {IFormApi} from "gold-entity/interfaces";
-import options from "gold-entity/options";
-import FaIcon from "gold/fa-icon";
-import {Modal} from "gold/modal-manager";
-import type Page from "gold/page";
-import toast from "gold/toast";
-import type {SvelteComponent} from "svelte";
+import Confirm from "../../components/form/confirm.svelte";
+import type {IFormApi} from "../interfaces";
+import options from "../options";
+import FaIcon from "gold/lib/fa-icon";
+import {Modal} from "gold/lib/modal-manager";
+import type Page from "gold/lib/page";
+import toast from "gold/lib/toast";
 import type {Writable} from "svelte/store";
 import {get, writable} from "svelte/store";
 import type List from "../list/list";
@@ -106,7 +105,7 @@ export default abstract class Form {
 			toast.success("Item saved");
 			this.reloadList();
 			return this.loadItem();
-		} catch (e) {
+		} catch (e:any) {
 			if (e.code === 422) this.errors = e.messages;
 		} finally {
 			this.page!.loading = false;

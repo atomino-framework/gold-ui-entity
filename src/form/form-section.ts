@@ -1,5 +1,5 @@
 import type AbstractInput from "./abstract-input";
-import type FaIcon from "gold/fa-icon";
+import type FaIcon from "gold/lib/fa-icon";
 
 export default class FormSection {
 

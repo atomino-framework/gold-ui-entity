@@ -1,9 +1,9 @@
-import type FaIcon from "gold/fa-icon";
-import Page from "gold/page";
-import type PageManager from "gold/page-manager";
+import type FaIcon from "gold/lib/fa-icon";
+import Page from "gold/lib/page";
+import type PageManager from "gold/lib/page-manager";
 import type {SvelteComponent} from "svelte";
 import type {Writable} from "svelte/store";
-import CFormPage from "./components/form-page.svelte";
+import CFormPage from "../../components/form/form-page.svelte";
 import type Form from "./form";
 
 export default class FormPage extends Page {

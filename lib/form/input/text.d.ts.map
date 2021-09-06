@@ -1,0 +1,1 @@
+{"version":3,"file":"text.d.ts","sourceRoot":"./src/","sources":["form/input/text.ts"],"names":[],"mappings":"AAAA,OAAO,aAAkC,MAAM,mBAAmB,CAAC;AAKnE,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,aAAa;IAE5C,IAAI,EAAC,OAAO,CAAS;IACrB,QAAQ,EAAE,OAAO,CAAS;IAEjC,IAAI,IAAG,IAAI;IAKX,QAAQ,IAAG,IAAI;CAKf"}

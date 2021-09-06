@@ -1,16 +1,16 @@
-import FaIcon from "gold/fa-icon";
-import handleFetch from "gold/handle-fetch";
-import GoldList from "gold/list";
-import type ListManager from "gold/list-manager";
+import FaIcon from "gold/lib/fa-icon";
+import handleFetch from "gold/lib/handle-fetch";
+import GoldList from "gold/lib/list";
+import type ListManager from "gold/lib/list-manager";
 import type {SvelteComponent} from "svelte";
 import {get, writable, Writable} from "svelte/store";
 import type Form from "../form/form";
 import FormPage from "../form/form-page";
 import type {IListApi, IListOptions} from "../interfaces";
-import CCard from "./components/card.svelte";
-import CList from "./components/list.svelte";
+import CCard from "../../components/list/card.svelte";
+import CList from "../../components/list/list.svelte";
 import ListButton from "./list-button";
-import options from "gold-entity/options";
+import options from "../options";
 
 export default abstract class List extends GoldList {
 

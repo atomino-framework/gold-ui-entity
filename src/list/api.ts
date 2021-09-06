@@ -1,5 +1,5 @@
-import type {IListApi} from "gold-entity/interfaces";
-import handleFetch from "gold/handle-fetch";
+import type {IListApi} from "../interfaces";
+import handleFetch from "gold/lib/handle-fetch";
 
 export default class Api implements IListApi {
 

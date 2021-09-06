@@ -1,5 +1,5 @@
 import type {IOptions} from "./interfaces";
-import FaIcon from "gold/fa-icon";
+import FaIcon from "gold/lib/fa-icon";
 
 let options: IOptions = {
 	form: {

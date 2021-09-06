@@ -1,5 +1,5 @@
 import type {IFormApi} from "../interfaces";
-import handleFetch from "gold/handle-fetch";
+import handleFetch from "gold/lib/handle-fetch";
 
 export default class Api implements IFormApi {
 

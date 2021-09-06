@@ -2,8 +2,12 @@
   "author": {
     "name": "Gergely Laborci"
   },
+  "dependencies": {
+    "gold": "github:atomino-framework/gold-ui",
+    "svelma": "^0.4.5",
+    "svelte": "^3.42.4"
+  },
   "bundleDependencies": [],
-  "dependencies": {},
   "deprecated": false,
   "description": "",
   "license": "ISC",
@@ -11,9 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "typgings/list-mager.d.ts",
   "version": "1.0.0",
-  "keywords": [],
-   "exports": {
-    "./": "./src/"
-  }
+  "keywords": []
 }

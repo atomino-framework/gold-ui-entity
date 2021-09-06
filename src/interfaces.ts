@@ -1,4 +1,4 @@
-import type FaIcon from "gold/fa-icon";
+import type FaIcon from "gold/lib/fa-icon";
 
 
 export interface IOptions {

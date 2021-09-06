@@ -1,0 +1,1 @@
+{"version":3,"file":"color.js","sourceRoot":"./src/","sources":["form/input/color.ts"],"names":[],"mappings":";;;;;;AAAA,OAAO,aAAa,EAAE,EAAC,SAAS,EAAE,MAAM,EAAC,MAAM,mBAAmB,CAAC;AACnE,OAAO,MAAM,MAAM,6CAA6C,CAAA;AAIhE,IAAqB,UAAU,GAA/B,MAAqB,UAAW,SAAQ,aAAa;CAAG,CAAA;AAAnC,UAAU;IAF9B,SAAS,CAAC,MAAM,CAAC;IACjB,MAAM,CAAC,KAAK,CAAC;GACO,UAAU,CAAyB;eAAnC,UAAU"}
