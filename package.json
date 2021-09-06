@@ -5,7 +5,8 @@
   "dependencies": {
     "gold": "github:atomino-framework/gold-ui",
     "svelma": "^0.4.5",
-    "svelte": "^3.42.4"
+    "svelte": "^3.42.4",
+    "marked": "^3.0.2"
   },
   "bundleDependencies": [],
   "deprecated": false,
