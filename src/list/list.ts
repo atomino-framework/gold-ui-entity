@@ -106,6 +106,7 @@ export let buttons: Record<"new", { icon: FaIcon, action: (form: List) => void }
 
 export function button(icon: FaIcon | { icon: FaIcon, action: (list: List) => void }, action: ((list: List) => void) | null = null) {
 	return function (constructor: typeof List) {
+		if (!constructor.hasOwnProperty('buttons')) Object.defineProperty(constructor, 'buttons', {value: [], writable: true});
 		if (icon instanceof FaIcon && action !== null) constructor.buttons.push({icon, action})
 		else if (!(icon instanceof FaIcon)) constructor.buttons.push(icon);
 	}
@@ -113,9 +114,9 @@ export function button(icon: FaIcon | { icon: FaIcon, action: (list: List) => vo
 
 export function list(title: string, icon: FaIcon, api: IListApi, form: () => typeof Form) {
 	return function (constructor: typeof List) {
-		constructor.icon = icon;
-		constructor.title = title;
-		constructor.api = api;
-		constructor.form = form;
+		Object.defineProperty(constructor, 'icon', {value: icon, writable: true});
+		Object.defineProperty(constructor, 'title', {value: title, writable: true});
+		Object.defineProperty(constructor, 'api', {value: api, writable: true});
+		Object.defineProperty(constructor, 'form', {value: form, writable: true});
 	}
 }

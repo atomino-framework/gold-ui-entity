@@ -159,14 +159,15 @@ export default abstract class Form {
 
 export function form(icon: FaIcon, api: IFormApi, list: (() => typeof List | Array<typeof List>) | null = null) {
 	return function (constructor: typeof Form) {
-		constructor.icon = icon;
-		constructor.list = list;
-		constructor.api = api;
+		Object.defineProperty(constructor, 'icon', {value: icon, writable: true});
+		Object.defineProperty(constructor, 'list', {value: list, writable: true});
+		Object.defineProperty(constructor, 'api', {value: api, writable: true});
 	}
 }
 
 export function button(icon: FaIcon | { icon: FaIcon, action: (form: Form) => void, onlyIfExists: boolean }, action: ((form: Form) => void) | null = null, onlyIfExists: boolean = false) {
 	return function (constructor: typeof Form) {
+		if (!constructor.hasOwnProperty('buttons')) Object.defineProperty(constructor, 'buttons', {value: [], writable: true});
 		if (icon instanceof FaIcon && action !== null) constructor.buttons.push({icon, action, onlyIfExists});
 		if (!(icon instanceof FaIcon)) constructor.buttons.push(icon);
 	}
