@@ -12,7 +12,7 @@ export default class Api implements IFormApi {
 		return fetch(this.apiBase + "/blank", {method: "POST"}).then(handleFetch);
 	}
 	create(item: any): Promise<false | null | number> {
-		return fetch(this.apiBase + "/create/", {method: "POST", body: JSON.stringify({item})}).then(handleFetch);
+		return fetch(this.apiBase + "/create", {method: "POST", body: JSON.stringify({item})}).then(handleFetch);
 	}
 	update(item: any): Promise<false | null | number> {
 		return fetch(this.apiBase + "/update/" + item.id, {method: "POST", body: JSON.stringify({item})}).then(handleFetch);
