@@ -8,4 +8,4 @@
 	export let onChange: Function;
 </script>
 
-<Input type="password" size="is-small" bind:value={$item[control.field]} on:change={onChange} passwordReveal={true}/>
+<Input type="password" autocomplete="new-password" size="is-small" bind:value={$item[control.field]} on:change={onChange} passwordReveal={true}/>
