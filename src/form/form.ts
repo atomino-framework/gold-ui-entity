@@ -131,10 +131,15 @@ export default abstract class Form {
 						modal.close();
 						this.page!.loading = true;
 						if (typeof this.id !== 'number') throw "ERROR";
-						await this.api!.delete(this.id);
-						this.reloadList();
-						this.page!.loading = false;
-						this.page?.pageManager?.remove(this.page);
+						try{
+							await this.api!.delete(this.id);
+							this.page?.pageManager?.remove(this.page);
+							this.reloadList();
+						}catch (exception){
+
+						}finally {
+							this.page!.loading = false;
+						}
 					}
 				}
 			]
