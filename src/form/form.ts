@@ -133,10 +133,9 @@ export default abstract class Form {
 						if (typeof this.id !== 'number') throw "ERROR";
 						try{
 							await this.api!.delete(this.id);
-							this.page?.pageManager?.remove(this.page);
 							this.reloadList();
+							this.page?.pageManager?.remove(this.page);
 						}catch (exception){
-
 						}finally {
 							this.page!.loading = false;
 						}
